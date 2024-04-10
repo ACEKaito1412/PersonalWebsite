@@ -234,6 +234,7 @@ class Home extends BaseController
     {
         $message_model = new MessageModel();
 
+
         $name = $this->request->getVar('name');
         $email = $this->request->getVar('email');
         $subject = $this->request->getVar('subject');
@@ -314,7 +315,7 @@ class Home extends BaseController
 
         $email = \Config\Services::email();
 
-        $email->setFrom('macdon.jc.bscs@gmail.com', 'JCFM');
+        $email->setFrom(getenv('CI_EMAIL'), 'JCFM');
         $email->setTo($to);
 
         $email->setSubject($subject);
