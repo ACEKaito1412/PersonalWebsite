@@ -56,4 +56,13 @@ abstract class BaseController extends Controller
 
         $this->session = \Config\Services::session();
     }
+
+    public function checkAdmin()
+    {
+        if ($this->session->get('admin_id') == null) {
+            return false;
+        } else {
+            return true;
+        }
+    }
 }

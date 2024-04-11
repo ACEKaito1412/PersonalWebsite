@@ -53,12 +53,12 @@
         var formData = new FormData();
 
         var xhr = new XMLHttpRequest();
-        xhr.open('POST', '<?= site_url("delete_post") ?>');
+        xhr.open('POST', '<?= site_url("delete_item") ?>');
 
         xhr.onload = function() {
             if (xhr.status == 200) {
                 console.log(xhr.responseText);
-                // window.location.href = '<?= base_url() . 'all_post' ?>';
+                window.location.href = '<?= base_url() . 'all_post' ?>';
             } else {
                 console.log('Error Saving: ', xhr.statusText);
             }
@@ -120,7 +120,7 @@
         console.log(data);
 
         var xhr = new XMLHttpRequest();
-        xhr.open('POST', '<?= site_url("save_post") ?>');
+        xhr.open('POST', '<?= site_url("save_item") ?>');
 
         xhr.onload = function() {
             if (xhr.status == 200) {
