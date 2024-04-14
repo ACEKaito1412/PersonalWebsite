@@ -48,20 +48,14 @@
                 </div>
             </div>
             <div class="m-2">
-                <div class="card shadow-soft text-center border-light neu">
-                    <div class="card-header">
-                        <span class="card-text small"><span class="far fa-calendar-alt mr-2"></span>15 March
-                            2020</span>
-                    </div>
-                    <div class="card-body">
-
-                        <p class="card-text">
-                            With supporting text below as a natural lead-in to additional
-                            content.
-                        </p>
-                        <a href="#" class="btn neu neu-btn btn-sm">Learn More</a>
-                    </div>
-                </div>
+                <h3 class="text-center">Latest Post</h3>
+                <?php foreach ($posts as $post) : ?>
+                    <a href="<?= site_url('/all_post/' . $post['id']) ?>" class="d-flex align-content-center flex-wrap neu neu-btn my-3" style="text-decoration: none;">
+                        <div class="d-flex justify-content-center align-items-center p-2">
+                            <p class="m-0"><?= $post['head'] ?></p>
+                        </div>
+                    </a>
+                <?php endforeach ?>
             </div>
         </div>
     </div>

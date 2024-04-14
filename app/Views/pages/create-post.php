@@ -1,4 +1,4 @@
-<div class="row d-flex flex-column flex-lg-row justify-content-center mt-5">
+<div class="row d-flex flex-column flex-lg-row justify-content-center mt-2">
     <h1 style="color: gray;">Create Post</h1>
     <div class="col-sm">
         <div class="card d-flex justify-content-center p-4 neu-inset text-right" id="content">

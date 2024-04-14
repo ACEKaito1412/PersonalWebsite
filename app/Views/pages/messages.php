@@ -1,22 +1,3 @@
-<style>
-    /* Hide scrollbar for Chrome, Safari and Opera */
-    .rmv-scroll::-webkit-scrollbar {
-        display: none;
-    }
-
-    /* Hide scrollbar for IE, Edge and Firefox */
-    .rmv-scroll {
-        -ms-overflow-style: none;
-        /* IE and Edge */
-        scrollbar-width: none;
-        /* Firefox */
-    }
-
-    .msg-shadow {
-        box-shadow: inset 0px -16px 15px -3px rgba(0, 0, 0, 0.1);
-    }
-</style>
-
 <div class="row d-flex flex-column flex-lg-row align-content-center justify-content-center mt-2">
     <div class="row d-flex  flex-column flex-lg-row">
         <div class="col col-lg-4 " style="height: 400px;">
@@ -47,6 +28,9 @@
     </div>
 </div>
 
+<?php
+echo view('partials/footer-2')
+?>
 <script>
     function sendMail() {
         var formData = new FormData();

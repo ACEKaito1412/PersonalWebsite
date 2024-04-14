@@ -41,12 +41,14 @@
         </div>
 
         <div class="col-10 col-sm-4 flex-grow-1">
-            <div class="d-flex  flex-column mx-auto w-100 pt-5">
-                <?php if ($breadCrumbs && $page != 'pages/post') {
+            <div class="d-flex flex-column mx-auto w-100 pt-5">
+                <?php
+
+                if ($breadCrumbs) {
                     echo view('/partials/breadCrumbs');
                 }
-                ?>
-                <?php echo view($page) ?>
+
+                echo view($page) ?>
             </div>
         </div>
 </section>

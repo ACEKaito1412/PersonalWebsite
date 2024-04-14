@@ -33,4 +33,6 @@ if ($project['content'] == '' &&  $admin) { ?>
     ];
     echo view('partials/item', $data);
 }
+
+echo view('/partials/footer-2');
 ?>

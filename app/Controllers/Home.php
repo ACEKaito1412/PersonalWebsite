@@ -24,10 +24,12 @@ class Home extends BaseController
 
     public function index()
     {
+        $res = $this->post_model->orderBy('created_at', 'DESC')->findAll(3);
         $data = [
             'page_title' => "Home",
             'admin' => $this->checkAdmin(),
             'page' => 'pages/home',
+            'posts' => $res,
             'breadCrumbs' => false
         ];
         echo view('/partials/header', $data);

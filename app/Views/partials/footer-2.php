@@ -88,13 +88,12 @@
                 <h2 class="mb-3" style="color: gray;">Get in touch</h2>
                 <p class="mb-0 " style="font-size: 14px;">If you need any help with your services and wanted to reach out please contact me.</p>
                 <div class="mt-3 text-md-right">
-                    <button class="btn neu neu-btn" id="btnSubmit" type="button" data-bs-toggle="collapse" data-bs-target="#send-message" aria-expanded="false" aria-controls="send-message">
+                    <button class="btn neu neu-btn" id="btnSubmit" type="button" data-bs-toggle="collapse" data-bs-target="#send-message" aria-expanded="false" aria-controls="send-message" <?= $admin ? "disabled" : "" ?> ?>>
                         <span class="mr-1"><span class="fas fa-headphones"></span> </span>
                         Contact Me
                     </button>
                 </div>
             </div>
-
         </div>
     </div>
 </div>

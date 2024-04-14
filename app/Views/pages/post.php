@@ -6,20 +6,25 @@ $data_2 = [
 if ($admin) {
     echo view('/pages/create-post', $data_2);
 }
+?>
 
-for ($x = 0; $x < count($post); $x++) {
-    $item = $post[$x];
-    $decoded = json_decode($item['content'], true);
-    $data = [
-        'item' => $decoded,
-        'id' => $item['id']
-    ];
+<div class="col-sm mt-2 mb-3">
+    <h1 class="fw-bold mb-4">All Post</h1>
+    <?php
+    for ($x = 0; $x < count($post); $x++) {
+        $item = $post[$x];
+        $decoded = json_decode($item['content'], true);
+        $data = [
+            'item' => $decoded,
+            'id' => $item['id']
+        ];
 
-    if ($x == 0) {
-        echo view('partials/item', $data);
-    } else {
+
         echo view('partials/postList', $data);
     }
-}
+    ?>
+</div>
 
+<?php
 echo view('/partials/footer-2');
+?>

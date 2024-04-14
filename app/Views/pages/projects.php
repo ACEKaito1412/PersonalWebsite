@@ -1,5 +1,5 @@
-<h1 class="fw-bold">Projects</h1>
 <div class="col-sm mt-2 mb-3">
+    <h1 class="fw-bold">Projects</h1>
     <?php
     if ($admin) {
         echo view('/partials/createProjects');
