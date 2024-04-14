@@ -65,4 +65,26 @@ abstract class BaseController extends Controller
             return true;
         }
     }
+
+    public function getImages()
+    {
+
+        helper('filesystem');
+        $imageFolder = './public/uploads';
+        $images = directory_map($imageFolder);
+
+        $imageFiles = array();
+        foreach ($images as $file) {
+            $fileInfo = pathinfo($file);
+            $extension = strtolower($fileInfo['extension']);
+            if (in_array($extension, array('jpg', 'jpeg', 'png', 'gif'))) {
+                $imageFiles[] = $file;
+            }
+        }
+
+
+        $images = json_encode($imageFiles);
+
+        return $images;
+    }
 }

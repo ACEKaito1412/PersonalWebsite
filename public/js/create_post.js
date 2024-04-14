@@ -57,6 +57,25 @@ function createTitleTwo(textContent = "This is Title Two") {
   content.appendChild(titleElement);
 }
 
+function createLink(textContent = "https://google.com") {
+  var content = document.getElementById("content");
+  console.log("Created Title");
+  var linkElement = createEditableElement(
+    "a",
+    textContent,
+    "fw-bolder position-relative"
+  );
+
+  linkElement.href = textContent;
+  linkElement.addEventListener("input", function () {
+    linkElement.href = linkElement.textContent;
+    console.log("change");
+  });
+  var badge = createRemoveBadge();
+  addRemoveBadge(linkElement, badge);
+  content.appendChild(linkElement);
+}
+
 function createUIElement(textContent = "Content") {
   var content = document.getElementById("content");
   console.log("Created Unlisted Element");

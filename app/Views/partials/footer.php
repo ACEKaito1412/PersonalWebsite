@@ -1,6 +1,6 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 <script src="<?= site_url() ?>/public/js/utils.js"></script>
-<script src="<?= site_url() ?>/public/js/create_post.js"></script>
+<script src="<?= site_url() ?>/public/js/create_post.js?version=8"></script>
 <script>
     function createImageTwo(input) {
         console.log('Create Image');

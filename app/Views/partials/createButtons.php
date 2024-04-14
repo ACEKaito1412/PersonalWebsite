@@ -22,6 +22,9 @@
         <button class="btn" type="button" onclick="createUIElement()">
             Unlisted Element
         </button>
+        <button class="btn" type="button" onclick="createLink()">
+            Link
+        </button>
     </div>
 
     <?php if ($page == 'pages/post') { ?>
@@ -29,4 +32,29 @@
             <button class="btn neu neu-btn" onclick="saveContent(0, 'new', 'post')">Add Post</button>
         </div>
     <?php } ?>
+
+    <div class="modal fade neu" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content neu-inset" style="height: 90%; width: 100%">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Image Selection</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body row overflow-y-scroll justify-content-center rmv-scroll">
+                    <?php
+                    $decoded = json_decode($images);
+                    foreach ($decoded as $images) : ?>
+                        <div class="overflow-hidden col-lg-3 col-4 m-2 neu neu-btn" style="height: 80px; width:80px; padding: 0;">
+                            <img src="<?= base_url() . 'public/uploads/' . $images ?>" alt="" style="height: 80px" onclick="selectImg(event)">
+                            <input type="radio" name="imgSelected" value="<?= base_url() . 'public/uploads/' . $images ?>" class="input_radio" style="display:none">
+                        </div>
+                    <?php endforeach ?>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn neuhover" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn neu neu-btn" onclick="saveChanges()">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

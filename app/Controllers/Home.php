@@ -37,7 +37,24 @@ class Home extends BaseController
 
     public function test()
     {
-        return view('test.php');
+
+        helper('filesystem');
+        $imageFolder = './public/uploads';
+        $images = directory_map($imageFolder);
+
+        $imageFiles = array();
+        foreach ($images as $file) {
+            $fileInfo = pathinfo($file);
+            $extension = strtolower($fileInfo['extension']);
+            if (in_array($extension, array('jpg', 'jpeg', 'png', 'gif'))) {
+                $imageFiles[] = $file;
+            }
+        }
+
+
+        $images = json_encode($imageFiles);
+
+        return $images;
     }
 
     public function save_item()

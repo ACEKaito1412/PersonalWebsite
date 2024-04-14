@@ -18,6 +18,7 @@ class PostController extends BaseController
 
     public function index()
     {
+        $images = $this->getImages();
         $res = $this->post_model->orderBy('created_at', 'DESC')->findAll();
 
         $data = [
@@ -26,6 +27,7 @@ class PostController extends BaseController
             'post' => $res,
             'page' => 'pages/post',
             'breadCrumbs' => true,
+            'images' => $images
         ];
 
         echo view('/partials/header', $data);
@@ -36,14 +38,15 @@ class PostController extends BaseController
     public function openPost($postId)
     {
         $res = $this->post_model->find($postId);
-
+        $images = $this->getImages();
         if ($res != null) {
             $data = [
                 'page_title' => "Home",
                 'admin' => $this->checkAdmin(),
                 'post' => $res,
                 'page' => 'pages/openPost',
-                'breadCrumbs' => true
+                'breadCrumbs' => true,
+                'images' => $images
             ];
 
             echo view('/partials/header', $data);

@@ -37,6 +37,11 @@ function generate_editable($id)
             ?>
                 <p class="fw-small position-relative" <?php if ($admin && $page != 'pages/post') { ?> contenteditable="true" id="<?= $randName ?>" onmouseenter="mouseEnter(event, '<?= $randName ?>')" onmouseleave="mouseLeave(event)" <?php } ?>><?= $i['content'] ?><?php generate_editable($randName); ?></p>
             <?php }
+            if ($i['type'] == 'a') {
+                $randName = random_string(8);
+            ?>
+                <a class="fw-bolder position-relative" href="<?= $i['content'] ?>" <?php if ($admin && $page != 'pages/post') { ?> contenteditable="true" id="<?= $randName ?>" onmouseenter="mouseEnter(event, '<?= $randName ?>')" onmouseleave="mouseLeave(event)" <?php } ?>><?= $i['content'] ?> <?php generate_editable($randName); ?> </a>
+            <?php }
             if ($i['type'] == 'pre') {
                 $randName = random_string(8);
             ?>
@@ -51,8 +56,8 @@ function generate_editable($id)
             if ($i['type'] == 'img') {
                 $randName = random_string(8);
             ?>
-                <div class="position-relative mb-2 mt-2" <?php if ($admin && $page != 'pages/post') { ?> contenteditable="true" id="<?= $randName ?>" onmouseenter="mouseEnter(event, '<?= $randName ?>')" onmouseleave="mouseLeave(event)" <?php } ?>>
-                    <img src="<?= base_url() . 'public/uploads/' . $i['content']  ?>" class="img-fluid">
+                <div class="position-relative mb-2 mt-2" <?php if ($admin && $page != 'pages/post') { ?> id="<?= $randName ?>" onmouseenter="mouseEnter(event, '<?= $randName ?>')" onmouseleave="mouseLeave(event)" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="storeId(event)" <?php } ?>>
+                    <img src="<?= base_url() . 'public/uploads/' . $i['content'] ?>" class="img-fluid">
                     <?php generate_editable($randName); ?>
                 </div>
             <?php }
@@ -104,5 +109,44 @@ if ($page != 'pages/post' &&  $admin) {
         var elements = element.getElementsByTagName('i');
 
         elements[0].style.display = 'none';
+    }
+
+
+    let selectedImageSrc = "";
+    let imageSrc = "";
+
+    function storeId(ev) {
+        selectedImageSrc = ev.target;
+    }
+
+    function selectImg(ev) {
+        var img = ev.target;
+        var container = img.parentNode;
+        container.classList.add("n-active");
+        var input = container.querySelector(".input_radio");
+        if (input) {
+            input.checked = true; // Check the radio input
+            imageSrc = input.value;
+        } else {
+            console.log("Radio input not found");
+        }
+        changeDisplay();
+    }
+
+    function changeDisplay() {
+        var inputs = document.querySelectorAll(".input_radio");
+        for (var i = 0; i < inputs.length; i++) {
+            var input = inputs[i];
+
+            if (!input.checked) {
+                var parentNode = input.parentElement;
+                parentNode.classList.remove("n-active");
+            }
+        }
+    }
+
+    function saveChanges() {
+        selectedImageSrc.src = imageSrc;
+        document.body.classList.remove("modal-open");
     }
 </script>
