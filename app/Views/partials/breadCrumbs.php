@@ -6,7 +6,7 @@ $segments = explode('/', $path);
 
 <div class="d-flex flex-column mt-5">
     <nav aria-label="breadcrumb" style="height: 80px">
-        <ol class="breadcrumb d-flex w-100 align-items-center neu-inset rounded p-2">
+        <ol class="breadcrumb d-flex w-100 align-items-center neu-inset p-2">
             <li class="breadcrumb-item p-2"><a href="<?= site_url() ?>" style="text-decoration: none; color: black;">HOME</a></li>
             <?php for ($i = 2; $i < count($segments); $i++) {
                 $url_path = '';

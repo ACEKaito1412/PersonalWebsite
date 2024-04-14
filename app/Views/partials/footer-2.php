@@ -6,7 +6,7 @@
                     <div class="col col-lg-4 d-flex flex-column justify-content-center">
                         <h1 class="m-3">Let's discuss something together.</h1>
                         <div class="m-3">
-                            <span class="p-2 my-3 border rounded">macdon.jc.bscs@gmail.com</span>
+                            <p class=" my-2 p-2">macdon.jc.bscs@gmail.com</p>
                             <span class="p-2 my-3">+639774249341</span>
                         </div>
                         <ul class="list-unstyled d-flex justify-content-center m-3">

@@ -1,6 +1,6 @@
 <div class="d-flex flex-column w-100 h-auto justify-content-center">
     <!-- Project Card 1 -->
-    <div class="d-flex flex-column flex-lg-row m-4  neu-inset rounded">
+    <div class="d-flex flex-column flex-lg-row m-4  neu-inset">
         <div class="overflow-hidden p-3" style="width: 100%; aspect-ratio: 1/1;">
             <img src="<?= site_url() . 'public/uploads/' . $project['img_src'] ?>" alt="..." style="height:85%;">
         </div>

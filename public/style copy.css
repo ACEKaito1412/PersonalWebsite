@@ -5,7 +5,7 @@
 }
 
 body {
-  background: #e6e7ee;
+  background: black;
 }
 
 .linkLogo {
@@ -15,7 +15,7 @@ body {
 }
 
 .bg-neu {
-  background-color: #e6e7ee;
+  background-color: #161b22;
 }
 
 .neu,
@@ -24,36 +24,33 @@ body {
 .neu-input,
 .neu-input:focus {
   color: #31344b;
-  background-color: #e6e6e6;
-  border-color: #e6e7ee;
+  background-color: #161b22;
 }
 
 .neu,
 .neu-input {
-  border-radius: 10px;
-  box-shadow: -4px -4px 5px 1px #ffffff, 4px 4px 5px 1px #a3a3a3;
+  box-shadow: 5px 5px 5px 0px #0d1117;
 }
 
 .neu-btn:hover,
 .neu-inset,
 .neu-input,
 .neu-input:focus {
-  box-shadow: inset -4px -4px 5px 0px #ffffff, inset 4px 4px 5px 1px #a3a3a3;
+  border: 1px solid #7ce38b;
+  box-shadow: 5px 5px 5px 0px #0d1117;
 }
 
 .neu-input:focus {
-  box-shadow: inset 0px -4px 4px rgba(255, 255, 255, 0.3),
-    inset 0px 4px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 5px 5px 5px 0px #0d1117;
 }
 
 .code {
-  background-color: black;
-  border: 1px solid #ced4da;
-  border-radius: 5px;
+  background-color: white;
+  border: 1px solid #7ce38b;
   padding: 10px;
   font-family: monospace;
   overflow-x: auto;
-  color: white;
+  color: rgb(12, 12, 12);
   font-size: 14px;
   line-height: 1.5;
 }
@@ -61,8 +58,7 @@ body {
 .neuhover:hover,
 .n-active {
   color: #31344b;
-  background-color: #e6e6e6;
-  border-color: #e6e7ee;
-  border-radius: 10px;
-  box-shadow: inset -4px -4px 5px 0px #ffffff, inset 4px 4px 5px 1px #a3a3a3;
+  background-color: #161b22;
+  border-color: #7ce38b;
+  box-shadow: 5px 5px 5px 0px #0d1117;
 }

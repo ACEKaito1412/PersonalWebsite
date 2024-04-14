@@ -51,7 +51,7 @@ function generate_editable($id)
             if ($i['type'] == 'span') {
                 $randName = random_string(8);
             ?>
-                <span class="small my-2 border position-relative" <?php if ($admin && $page != 'pages/post') { ?> contenteditable="true" id="<?= $randName ?>" onmouseenter="mouseEnter(event, '<?= $randName ?>')" onmouseleave="mouseLeave(event)" <?php } ?>><?= $i['content'] ?><?php generate_editable($randName); ?></span>
+                <span class="small my-2 position-relative" <?php if ($admin && $page != 'pages/post') { ?> contenteditable="true" id="<?= $randName ?>" onmouseenter="mouseEnter(event, '<?= $randName ?>')" onmouseleave="mouseLeave(event)" <?php } ?>><?= $i['content'] ?><?php generate_editable($randName); ?></span>
             <?php }
             if ($i['type'] == 'img') {
                 $randName = random_string(8);

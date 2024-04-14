@@ -1,5 +1,5 @@
 <div class="d-flex flex-column w-100 h-auto justify-content-center">
-    <div class="d-flex flex-row m-4  neu-inset rounded">
+    <div class="d-flex flex-row m-4  neu-inset ">
         <div class="overflow-hidden  p-3" style="width: 300px; height: 300px">
             <img id="projectImg" src="<?= base_url() . 'public/img/upload-solid.png' ?>" alt="..." style="height:100%;" onclick="document.getElementById('inputProjectImg').click()">
             <input type="file" name="" id="inputProjectImg" style="display: none;" onchange="uploadImage()">
