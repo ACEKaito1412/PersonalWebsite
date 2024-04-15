@@ -30,7 +30,7 @@ class Home extends BaseController
             'admin' => $this->checkAdmin(),
             'page' => 'pages/home',
             'posts' => $res,
-            'breadCrumbs' => false
+            'breadCrumbs' => true
         ];
         echo view('/partials/header', $data);
         echo view('/partials/nav', $data);

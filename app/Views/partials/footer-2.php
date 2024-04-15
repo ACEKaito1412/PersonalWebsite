@@ -118,8 +118,6 @@
         contaier.style.display = "block";
     }
 
-    localStorage.clear();
-
     function send_message(event) {
         event.preventDefault();
 

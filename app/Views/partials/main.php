@@ -48,7 +48,7 @@
                 </div>
             </div>
             <div class="m-2">
-                <h3 class="text-center">Latest Post</h3>
+                <h3 class="text-center" style="color: gray;">All Post</h3>
                 <?php foreach ($posts as $post) : ?>
                     <a href="<?= site_url('/all_post/' . $post['id']) ?>" class="d-flex align-content-center flex-wrap neu neu-btn my-3" style="text-decoration: none;">
                         <div class="d-flex justify-content-center align-items-center p-2">

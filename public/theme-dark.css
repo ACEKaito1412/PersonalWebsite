@@ -8,6 +8,10 @@ body {
   background: black;
 }
 
+.my-color {
+  color: #faa356;
+}
+
 .linkLogo {
   font-size: 30px;
   color: black;
@@ -36,8 +40,10 @@ body {
 .neu-inset,
 .neu-input,
 .neu-input:focus {
-  border: 1px solid #7ce38b;
-  box-shadow: 5px 5px 5px 0px #0d1117;
+  color: #faa356;
+  background-color: #0d1117;
+  box-shadow: 5px 5px 5px 0px #161b22;
+  border: 0.1px solid black;
 }
 
 .neu-input:focus {
@@ -57,8 +63,7 @@ body {
 
 .neuhover:hover,
 .n-active {
-  color: #31344b;
-  background-color: #161b22;
-  border-color: #7ce38b;
-  box-shadow: 5px 5px 5px 0px #0d1117;
+  color: #faa356;
+  background-color: #0d1117;
+  box-shadow: 5px 5px 5px 0px #161b22;
 }

@@ -8,7 +8,7 @@ foreach ($item as $i) {
         $title = $i['content'];
     };
 
-    if ($i['type'] == 'p') {
+    if ($i['type'] == 'p'  && $body == '') {
         $body = $i['content'];
     }
 

@@ -9,7 +9,7 @@ if ($admin) {
 ?>
 
 <div class="col-sm mt-2 mb-3">
-    <h1 class="fw-bold mb-4">All Post</h1>
+    <h1 class="fw-bold mb-4 my-color">All Post</h1>
     <?php
     for ($x = 0; $x < count($post); $x++) {
         $item = $post[$x];

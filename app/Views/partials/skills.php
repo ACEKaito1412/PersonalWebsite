@@ -11,11 +11,11 @@ $skills = [
 
 ?>
 <div class="row d-flex flex-column flex-lg-row justify-content-center align-items-center mt-5">
-    <h1 class="fw-bolder mb-4 p-2 neu-inset text-center ">My Skills</h1>
+    <h1 class="fw-bolder mb-4 mx-2 p-2 neu-inset text-center ">My Skills</h1>
 
     <div class="row mt-5 d-flex justify-content-start">
         <?php foreach ($skills as $skill) { ?>
-            <div class="col-sm m-2 ">
+            <div class="col m-1 flex-grow-1 ">
                 <div class="card-container d-flex justify-content-center">
                     <div class="p-3 neu-btn ">
                         <a href="<?= site_url() . 'projects/' ?>">
