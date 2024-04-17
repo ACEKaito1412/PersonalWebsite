@@ -8,6 +8,10 @@ body {
   background: #e6e7ee;
 }
 
+.p-color {
+  color: #161b22;
+}
+
 .linkLogo {
   font-size: 30px;
   color: black;

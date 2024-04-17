@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 use App\Controllers\BaseController;
 use App\Models\ProjectModel;
+use CodeIgniter\Exceptions\PageNotFoundException;
 use CodeIgniter\HTTP\ResponseInterface;
 
 class ProjectController extends BaseController
@@ -34,19 +35,25 @@ class ProjectController extends BaseController
 
     public function openProject($id)
     {
-        $res = $this->project_model->find($id);
+        $project = $this->project_model->find($id);
 
-        $data = [
-            'page_title' => "Home",
-            'admin' => $this->checkAdmin(),
-            'project' => $res,
-            'page' => 'pages/openProject',
-            'breadCrumbs' => true
-        ];
+        if ($project != null) {
+            $images = $this->getImages();
+            $data = [
+                'page_title' => "Home",
+                'admin' => $this->checkAdmin(),
+                'project' => $project,
+                'page' => 'pages/openProject',
+                'images' => $images,
+                'breadCrumbs' => true
+            ];
 
-        echo view('/partials/header', $data);
-        echo view('/partials/nav', $data);
-        echo view('/partials/footer', $data);
+            echo view('/partials/header', $data);
+            echo view('/partials/nav', $data);
+            echo view('/partials/footer', $data);
+        } else {
+            throw PageNotFoundException::forPageNotFound("We can't find this page that your looking for.");
+        }
     }
 
     public function save_project()

@@ -26,12 +26,18 @@
             Link
         </button>
     </div>
-
     <?php if ($page == 'pages/post') { ?>
         <div class="d-flex flex-row justify-content-end mb-4">
             <button class="btn neu neu-btn" onclick="saveContent(0, 'new', 'post')">Add Post</button>
         </div>
     <?php } ?>
+
+    <div id="progress-container" style="display: none;">
+        <h4 class="m-3 p-color">Uploading</h4>
+        <div class="progress neu-inset m-3" role="progressbar" aria-label="Basic example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+            <div class="progress-bar bg-danger"></div>
+        </div>
+    </div>
 
     <div class="modal fade neu" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">

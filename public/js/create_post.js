@@ -67,6 +67,7 @@ function createLink(textContent = "https://google.com") {
   );
 
   linkElement.href = textContent;
+  linkElement.target = "_blank";
   linkElement.addEventListener("input", function () {
     linkElement.href = linkElement.textContent;
     console.log("change");
@@ -145,15 +146,20 @@ function createImageTwo(input) {
   xhr.open("POST", urlLocation + "upload_image", true);
 
   xhr.upload.onprogress = function (event) {
+    var container = document.querySelector("#progress-container");
+    container.style.display = "block";
+
+    var progress = document.querySelector(".progress-bar");
     if (event.lengthComputable) {
       var percentComplete = (event.loaded / event.total) * 100;
-      document.getElementById("status").textContent =
-        "Uploading: " + percentComplete.toFixed(2) + "%";
+      progress.style.width = percentComplete.toFixed(2) + "%";
     }
   };
 
   xhr.onload = function () {
     if (xhr.status === 200) {
+      var container = document.querySelector("#progress-container");
+      container.style.display = "none";
       var response = JSON.parse(xhr.responseText);
 
       console.log("Upload complete!");

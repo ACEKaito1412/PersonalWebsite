@@ -30,12 +30,12 @@ function generate_editable($id)
             if ($i['type'] == 'h3') {
                 $randName = random_string(8);
             ?>
-                <h3 class="fw-bolder position-relative" <?php if ($admin && $page != 'pages/post') { ?> contenteditable="true" id="<?= $randName ?>" onmouseenter="mouseEnter(event, '<?= $randName ?>')" onmouseleave="mouseLeave(event)" <?php } ?>><?= $i['content'] ?> <?php generate_editable($randName); ?> </h3>
+                <h3 class="fw-bolder position-relative" style="color: gray" <?php if ($admin && $page != 'pages/post') { ?> contenteditable="true" id="<?= $randName ?>" onmouseenter="mouseEnter(event, '<?= $randName ?>')" onmouseleave="mouseLeave(event)" <?php } ?>><?= $i['content'] ?> <?php generate_editable($randName); ?> </h3>
             <?php }
             if ($i['type'] == 'p') {
                 $randName = random_string(8);
             ?>
-                <p class="fw-small position-relative" <?php if ($admin && $page != 'pages/post') { ?> contenteditable="true" id="<?= $randName ?>" onmouseenter="mouseEnter(event, '<?= $randName ?>')" onmouseleave="mouseLeave(event)" <?php } ?>><?= $i['content'] ?><?php generate_editable($randName); ?></p>
+                <p class="fw-small position-relative p-color" <?php if ($admin && $page != 'pages/post') { ?> contenteditable="true" id="<?= $randName ?>" onmouseenter="mouseEnter(event, '<?= $randName ?>')" onmouseleave="mouseLeave(event)" <?php } ?>><?= $i['content'] ?><?php generate_editable($randName); ?></p>
             <?php }
             if ($i['type'] == 'a') {
                 $randName = random_string(8);
@@ -51,7 +51,7 @@ function generate_editable($id)
             if ($i['type'] == 'span') {
                 $randName = random_string(8);
             ?>
-                <span class="small my-2 position-relative" <?php if ($admin && $page != 'pages/post') { ?> contenteditable="true" id="<?= $randName ?>" onmouseenter="mouseEnter(event, '<?= $randName ?>')" onmouseleave="mouseLeave(event)" <?php } ?>><?= $i['content'] ?><?php generate_editable($randName); ?></span>
+                <span class="small my-2 position-relative p-color" <?php if ($admin && $page != 'pages/post') { ?> contenteditable="true" id="<?= $randName ?>" onmouseenter="mouseEnter(event, '<?= $randName ?>')" onmouseleave="mouseLeave(event)" <?php } ?>><?= $i['content'] ?><?php generate_editable($randName); ?></span>
             <?php }
             if ($i['type'] == 'img') {
                 $randName = random_string(8);
@@ -64,7 +64,7 @@ function generate_editable($id)
             if ($i['type'] == 'ul') {
                 $randName = random_string(8);
             ?>
-                <ul class="position-relative mb-2 mt-2" <?php if ($admin && $page != 'pages/post') { ?> contenteditable="true" id="<?= $randName ?>" onmouseenter="mouseEnter(event, '<?= $randName ?>')" onmouseleave="mouseLeave(event)" <?php } ?>>
+                <ul class="position-relative mb-2 mt-2 p-color" <?php if ($admin && $page != 'pages/post') { ?> contenteditable="true" id="<?= $randName ?>" onmouseenter="mouseEnter(event, '<?= $randName ?>')" onmouseleave="mouseLeave(event)" <?php } ?>>
                     <?php
                     generate_editable($randName);
                     $ulContent = json_decode($i['content'], true);
@@ -110,7 +110,6 @@ if ($page != 'pages/post' &&  $admin) {
 
         elements[0].style.display = 'none';
     }
-
 
     let selectedImageSrc = "";
     let imageSrc = "";

@@ -11,18 +11,18 @@
                         </div>
                         <ul class="list-unstyled d-flex justify-content-center m-3">
                             <li class="neu py-2 rounded-circle">
-                                <a href="#" target="_blank" aria-label="facebook social link" class=" mx-3">
-                                    <span class="fab fa-facebook-f fs-4"></span>
+                                <a href="https://github.com/ACEKaito1412" target="_blank" class="mx-3">
+                                    <i class="fa-brands fa-github fs-4"></i>
                                 </a>
                             </li>
                             <li class="py-2">
-                                <a href="#" target="_blank" aria-label="twitter social link" class="  mx-4" style="color:firebrick">
-                                    <span class="fab fa-twitter fs-4"></span>
+                                <a href="https://www.linkedin.com/in/macdon-jhun-carlo-34670a26b" target="_blank" aria-label="twitter social link" class="  mx-3" style="color:firebrick">
+                                    <i class="fa-brands fa-linkedin fs-4"></i>
                                 </a>
                             </li>
                             <li class="py-2">
-                                <a href="#" target="_blank" aria-label="slack social link" class="  mx-3">
-                                    <span class="fab fa-slack-hash fs-4"></span>
+                                <a href="https://www.facebook.com/jhuncarlo.macdon.7" target="_blank" aria-label="social link" class="  mx-3">
+                                    <i class="fa-brands fa-facebook fs-4"></i>
                                 </a>
                             </li>
                         </ul>
@@ -57,15 +57,15 @@
     </div>
     <div class="col d-flex flex-grow-1">
         <div class=" py-5 px-2">
-            <h2 class="mb-3" style="color: gray;">Jhun Carlo Macdon</h2>
-            <p class="mb-0" style="font-size: 14px;">Hi! Thanks for visiting my page. I'd like to add more flavor in the future and lots of spice.</p>
+            <h2 class="mb-3 my-color">Jhun Carlo Macdon</h2>
+            <p class="mb-0 p-color" style="font-size: 14px">Hi! Thanks for visiting my page. I'd like to add more flavor in the future and lots of spice.</p>
         </div>
         <div class=" px-5 py-5">
-            <h4 class="border-bottom border-2 py-2" style="color: gray;">Page Links</h4>
+            <h4 class="border-bottom border-2 py-2 my-color">Page Links</h4>
             <ul style="list-style-type: none; margin:0; padding: 0;">
-                <li><a href="<?= base_url('/') ?>" style="color: gray; text-decoration: none;">Home</a></li>
-                <li><a href="<?= base_url('/all_post') ?>" style="color: gray; text-decoration: none;">Post</a></li>
-                <li><a href="<?= base_url('/projects') ?>" style="color: gray; text-decoration: none;">Projects</a></li>
+                <li><a href="<?= base_url('/') ?>" style="text-decoration: none;" class="p-color">Home</a></li>
+                <li><a href="<?= base_url('/all_post') ?>" style="text-decoration: none;" class="p-color">Post</a></li>
+                <li><a href="<?= base_url('/projects') ?>" style="text-decoration: none;" class="p-color">Projects</a></li>
             </ul>
         </div>
     </div>
@@ -74,19 +74,19 @@
 
             <div class="col py-4 px-4" id="msgSent" style="display: none;">
                 <h2 class="mb-3" style="color: green;">Message Sent!</h2>
-                <p class="mb-3 " style="font-size: 14px;">Thank you for reaching out! Your message has been successfully sent.</p>
+                <p class="mb-3 p-color" style="font-size: 14px;">Thank you for reaching out! Your message has been successfully sent.</p>
             </div>
 
             <div class="col py-4 px-4" id="msgErrorOccured" style="display: none;">
                 <h2 class="mb-3" style="color: red;">Ow Snap!</h2>
                 <p class="mb-3 " style="font-size: 14px;">Something went wrong when we're trying to send the message, please use other method to contact me.</p>
-                <p class="mb-1" style="font-size: 14px;">Email: macdon.jc.bscs@gmail.com</p>
-                <p class="mb-1" style="font-size: 14px;">Phone: 09774249341</p>
+                <p class="mb-1 p-color" style="font-size: 14px;">Email: macdon.jc.bscs@gmail.com</p>
+                <p class="mb-1 p-color" style="font-size: 14px;">Phone: 09774249341</p>
             </div>
 
             <div class="col py-3 px-3" id="msgNotSent" style="display: none;">
-                <h2 class="mb-3" style="color: gray;">Get in touch</h2>
-                <p class="mb-0 " style="font-size: 14px;">If you need any help with your services and wanted to reach out please contact me.</p>
+                <h2 class="mb-3 my-color">Get in touch</h2>
+                <p class="mb-0 p-color" style="font-size: 14px;">If you need any help with your services and wanted to reach out please contact me.</p>
                 <div class="mt-3 text-md-right">
                     <button class="btn neu neu-btn" id="btnSubmit" type="button" data-bs-toggle="collapse" data-bs-target="#send-message" aria-expanded="false" aria-controls="send-message" <?= $admin ? "disabled" : "" ?> ?>>
                         <span class="mr-1"><span class="fas fa-headphones"></span> </span>

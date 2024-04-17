@@ -8,7 +8,7 @@
                     </a>
                     <div class="ms-3 ms-lg-0">
                         <h1 class="mb-1 mb-lg-2 f1 fw-600 my-color">I'm Jhun Carlo Macdon</h1>
-                        <p class="col-sm-8 col-lg-12 mx-auto mb-0 mb-lg-4" style="color: gray;">
+                        <p class="col-sm-8 col-lg-12 mx-auto mb-0 mb-lg-4 p-color">
                             Welcome to my profile, my Skills,
                             <a href="<?= base_url('projects') ?>" title="Visit my Projects">Projects</a>, and some
                             <a href="<?= base_url('all_post') ?>" title="Check out some of my post">Tutorials</a> will be uploaded in the future.

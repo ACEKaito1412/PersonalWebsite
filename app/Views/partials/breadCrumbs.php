@@ -8,9 +8,9 @@ $segments = explode('/', $path);
     <nav aria-label="breadcrumb" class="d-flex w-100 align-items-center justify-content-between neu-inset p-2" style="height: 80px">
         <ol class="breadcrumb m-0">
             <li class="breadcrumb-item p-2"><a href="<?= site_url() ?>" class="m-0" style="text-decoration: none; color: gray;">HOME</a></li>
-            <?php for ($i = 2; $i < count($segments); $i++) {
+            <?php for ($i = 1; $i < count($segments); $i++) {
                 $url_path = '';
-                for ($j = 2; $j <= $i; $j++) {
+                for ($j = 1; $j <= $i; $j++) {
                     $url_path .= '/' . $segments[$j];
                 }
             ?>

@@ -37,28 +37,6 @@ class Home extends BaseController
         echo view('/partials/footer', $data);
     }
 
-    public function test()
-    {
-
-        helper('filesystem');
-        $imageFolder = './public/uploads';
-        $images = directory_map($imageFolder);
-
-        $imageFiles = array();
-        foreach ($images as $file) {
-            $fileInfo = pathinfo($file);
-            $extension = strtolower($fileInfo['extension']);
-            if (in_array($extension, array('jpg', 'jpeg', 'png', 'gif'))) {
-                $imageFiles[] = $file;
-            }
-        }
-
-
-        $images = json_encode($imageFiles);
-
-        return $images;
-    }
-
     public function save_item()
     {
         $json_data = $this->request->getVar('json_data');

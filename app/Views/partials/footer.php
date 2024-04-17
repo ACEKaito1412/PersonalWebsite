@@ -1,5 +1,5 @@
 <script>
-    var urlLocation = "<?= site_url() ?>"
+    var urlLocation = "<?= base_url() ?>"
 
     let theme = localStorage.getItem("theme");
     let stylesheet = document.getElementById("stylesheet");
@@ -9,14 +9,14 @@
         document.getElementById("dark").style.color = "#faa356";
         stylesheet.setAttribute(
             "href",
-            urlLocation + "public/theme-dark.css?version=3"
+            urlLocation + "public/theme-dark.css?version=8"
         );
     } else {
         document.getElementById("dark").style.color = "gray";
         document.getElementById("light").style.color = "#faa356";
         stylesheet.setAttribute(
             "href",
-            urlLocation + "public/theme-light.css?version=3"
+            urlLocation + "public/theme-light.css?version=8"
         );
     }
 
@@ -28,7 +28,7 @@
             localStorage.setItem("theme", "dark");
             stylesheet.setAttribute(
                 "href",
-                urlLocation + "public/theme-dark.css?version=3"
+                urlLocation + "public/theme-dark.css?version=8"
             );
         } else {
             target.style.color = "#faa356";
@@ -36,14 +36,14 @@
             localStorage.setItem("theme", "light");
             stylesheet.setAttribute(
                 "href",
-                urlLocation + "public/theme-light.css?version=3"
+                urlLocation + "public/theme-light.css?version=8"
             );
         }
     }
 </script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 <script src="<?= site_url() ?>/public/js/utils.js?version=1"></script>
-<script src="<?= site_url() ?>/public/js/create_post.js?version=8"></script>
+<script src="<?= site_url() ?>/public/js/create_post.js?version=9"></script>
 <script>
     <?php
     if ($page == 'pages/openProject' && $admin) {

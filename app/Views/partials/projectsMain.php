@@ -6,7 +6,7 @@
         </div>
         <div class="d-flex justify-content-center flex-column p-3 w-100 w-lg-50">
             <h5 class="card-title"><?= $project['title'] ?></h5>
-            <p class="card-text"><?= $project['description']  ?></p>
+            <p class="card-text p-color mt-2"><?= $project['description']  ?></p>
             <div class="d-flex flex-row">
                 <?php
                 $categories = json_decode($project['category'], true);

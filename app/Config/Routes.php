@@ -6,7 +6,7 @@ use CodeIgniter\Router\RouteCollection;
  * @var RouteCollection $routes
  */
 $routes->get('/', 'Home::index');
-$routes->get('test', 'Home::test');
+// $routes->get('getImages', 'Home::get_images');
 
 
 $routes->post('save_item', 'Home::save_item');

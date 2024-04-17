@@ -22,7 +22,8 @@ class Admin extends BaseController
         }
         $data = [
             'page_title' => "Login",
-            'page' => "admin/login"
+            'page' => "admin/login",
+            'breadcrumbs' => true
         ];
 
         echo view('/partials/header', $data);
