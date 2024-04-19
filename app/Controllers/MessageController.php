@@ -54,9 +54,11 @@ class MessageController extends BaseController
         $res = $this->message_model->insert($data);
 
         if ($res) {
-            return $this->response->setStatusCode(200)->setJSON([
-                'message' => 'Message Save Succesfuly.'
-            ]);
+            if ($this->send_mail($email, $subject, $body)) {
+                return $this->response->setStatusCode(200)->setJSON([
+                    'message' => 'Message Save Succesfuly.'
+                ]);
+            }
         } else {
             return $this->response->setStatusCode(400)->setJSON([
                 'message' => 'Error Occured.'
@@ -86,26 +88,27 @@ class MessageController extends BaseController
         }
     }
 
-    public function send_mail()
+    private function send_mail($from, $subject, $message)
     {
-        // $to = $this->request->getVar('email');
-        $to = "catherinedevenecia83@gmail.com";
-        $subject = "Email Test 2";
-        $message = "Testing from the website. Love you wabb wabb wabb wabb";
+        $container = "<div>
+        <h1>You Have Received A Message</h1>
+        <p>Subject: " . $subject . "</p>
+        <p>From: " . $from . "</p>"
+            . $message .
+            "</div>";
 
         $email = \Config\Services::email();
 
         $email->setFrom(getenv('CI_EMAIL'), 'JCFM');
-        $email->setTo($to);
+        $email->setTo("jhuncarlomacdon@gmail.com");
 
-        $email->setSubject($subject);
-        $email->setMessage($message);
+        $email->setSubject("New Message");
+        $email->setMessage($container);
 
         if ($email->send()) {
-            echo 'Email successfully sent';
+            return true;
         } else {
-            $data = $email->printDebugger(['headers']);
-            print_r($data);
+            return false;
         }
     }
 }

@@ -46,6 +46,12 @@
                                 <label for="body" class="form-label">Message</label>
                                 <textarea name="body" id="body" cols="20" rows="10" class="form-control neu-input " required></textarea>
                             </div>
+                            <div id="progress-container" style="display:none;">
+                                <h4 class="m-3 p-color">Sending</h4>
+                                <div class="progress neu-inset m-3" role="progressbar" aria-label="Basic example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                                    <div class="progress-bar bg-danger"></div>
+                                </div>
+                            </div>
                             <div class="m-3">
                                 <button class="btn neu neu-btn p-color">Send Message</button>
                             </div>
@@ -129,9 +135,15 @@
 
         xhr.onprogress = function() {
             //lets prevent the clicking of the submit btn again
+            var container = document.querySelector('#progress-container');
+            contaier.style.display = 'block';
+            var constainer = document.querySelector('.progress-bar');
             var btn = document.getElementById('btnSubmit');
             btn.disabled = true;
-            console.log('sending');
+            if (event.lengthComputable) {
+                var percentComplete = (event.loaded / event.total) * 100;
+                progress.style.width = percentComplete.toFixed(2) + "%";
+            }
         }
 
         xhr.onload = function() {
@@ -143,7 +155,8 @@
                 btn.disabled = false;
 
                 localStorage.setItem('msgStatus', true);
-
+                var container = document.querySelector('#progress-container');
+                contaier.style.display = 'block';
                 location.reload();
             } else {
                 var response = JSON.parse(xhr.responseText);
@@ -153,6 +166,8 @@
                 console.log('Error: ' + response.message);
 
                 localStorage.setItem('msgStatus', false);
+                var container = document.querySelector('#progress-container');
+                contaier.style.display = 'block';
                 location.reload();
             }
         }
