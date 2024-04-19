@@ -22,7 +22,7 @@ class PostController extends BaseController
         $res = $this->post_model->orderBy('created_at', 'DESC')->findAll();
 
         $data = [
-            'page_title' => "Home",
+            'page_title' => "All Post",
             'admin' => $this->checkAdmin(),
             'post' => $res,
             'page' => 'pages/post',
@@ -41,7 +41,7 @@ class PostController extends BaseController
         $images = $this->getImages();
         if ($res != null) {
             $data = [
-                'page_title' => "Home",
+                'page_title' => "Open Post " . $postId,
                 'admin' => $this->checkAdmin(),
                 'post' => $res,
                 'page' => 'pages/openPost',

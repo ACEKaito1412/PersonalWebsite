@@ -21,7 +21,7 @@ class ProjectController extends BaseController
         $res = $this->project_model->groupBy('created_at', 'DESC')->findAll();
 
         $data = [
-            'page_title' => "Home",
+            'page_title' => "Projects",
             'admin' => $this->checkAdmin(),
             'page' => 'pages/projects',
             'projects' => ($res ? $res : ""),
@@ -40,7 +40,7 @@ class ProjectController extends BaseController
         if ($project != null) {
             $images = $this->getImages();
             $data = [
-                'page_title' => "Home",
+                'page_title' => "Projects " . $id,
                 'admin' => $this->checkAdmin(),
                 'project' => $project,
                 'page' => 'pages/openProject',

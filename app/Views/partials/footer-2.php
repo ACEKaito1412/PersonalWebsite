@@ -32,22 +32,22 @@
                         <form method="post" id="send-message-form" onsubmit="send_message(event)">
                             <div class="m-3">
                                 <label for="name" class="form-label">Name</label>
-                                <input type="text" class="form-control neu-input" name="name" id="name" required>
+                                <input type="text" class="form-control neu-input " name="name" id="name" required>
                             </div>
                             <div class="m-3">
                                 <label for="email" class="form-label">Email</label>
-                                <input type="email" name="email" id="email" class="form-control neu-input" required>
+                                <input type="email" name="email" id="email" class="form-control neu-input " required>
                             </div>
                             <div class="m-3">
                                 <label for="subject" class="form-label">Subject</label>
-                                <input type="text" name="subject" id="subject" class="form-control neu-input" required>
+                                <input type="text" name="subject" id="subject" class="form-control neu-input " required>
                             </div>
                             <div class="m-3">
                                 <label for="body" class="form-label">Message</label>
-                                <textarea name="body" id="body" cols="20" rows="10" class="form-control neu-input" required></textarea>
+                                <textarea name="body" id="body" cols="20" rows="10" class="form-control neu-input " required></textarea>
                             </div>
                             <div class="m-3">
-                                <button class="btn neu neu-btn">Send Message</button>
+                                <button class="btn neu neu-btn p-color">Send Message</button>
                             </div>
                         </form>
                     </div>
@@ -88,7 +88,7 @@
                 <h2 class="mb-3 my-color">Get in touch</h2>
                 <p class="mb-0 p-color" style="font-size: 14px;">If you need any help with your services and wanted to reach out please contact me.</p>
                 <div class="mt-3 text-md-right">
-                    <button class="btn neu neu-btn" id="btnSubmit" type="button" data-bs-toggle="collapse" data-bs-target="#send-message" aria-expanded="false" aria-controls="send-message" <?= $admin ? "disabled" : "" ?> ?>>
+                    <button class="btn neu neu-btn p-color" id="btnSubmit" type="button" data-bs-toggle="collapse" data-bs-target="#send-message" aria-expanded="false" aria-controls="send-message" <?= $admin ? "disabled" : "" ?> ?>>
                         <span class="mr-1"><span class="fas fa-headphones"></span> </span>
                         Contact Me
                     </button>

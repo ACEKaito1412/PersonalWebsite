@@ -9,14 +9,14 @@
         document.getElementById("dark").style.color = "#faa356";
         stylesheet.setAttribute(
             "href",
-            urlLocation + "public/theme-dark.css?version=8"
+            urlLocation + "public/theme-dark.css?version=1"
         );
     } else {
         document.getElementById("dark").style.color = "gray";
         document.getElementById("light").style.color = "#faa356";
         stylesheet.setAttribute(
             "href",
-            urlLocation + "public/theme-light.css?version=8"
+            urlLocation + "public/theme-light.css?version=3"
         );
     }
 
@@ -28,7 +28,7 @@
             localStorage.setItem("theme", "dark");
             stylesheet.setAttribute(
                 "href",
-                urlLocation + "public/theme-dark.css?version=8"
+                urlLocation + "public/theme-dark.css?version=1"
             );
         } else {
             target.style.color = "#faa356";
@@ -36,7 +36,7 @@
             localStorage.setItem("theme", "light");
             stylesheet.setAttribute(
                 "href",
-                urlLocation + "public/theme-light.css?version=8"
+                urlLocation + "public/theme-light.css?version=3"
             );
         }
     }

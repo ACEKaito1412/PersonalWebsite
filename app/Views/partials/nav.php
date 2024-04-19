@@ -17,20 +17,20 @@
                 </div>
 
                 <nav class="nav nav-pills justify-content-center flex-lg-column justify-content-lg-start gap-1 sidebar-nav">
-                    <a class="btn d-flex align-items-center fw-semibold m-2 neuhover <?= $page == 'pages/home' ? 'n-active' : '' ?>" href="<?= site_url('/') ?>">
+                    <a class="btn d-flex align-items-center p-color m-2 neuhover <?= $page == 'pages/home' ? 'n-active' : '' ?>" href="<?= site_url('/') ?>">
                         <i class="fa-solid fa-house me-2 f5" style="color: purple;"></i>
                         Home
                     </a>
-                    <a class="btn d-flex align-items-center fw-semibold m-2 neuhover <?= $page == 'pages/post' ? 'n-active' : '' ?>" href="<?= site_url('/all_post') ?>">
+                    <a class="btn d-flex align-items-center p-color m-2 neuhover <?= $page == 'pages/post' ? 'n-active' : '' ?>" href="<?= site_url('/all_post') ?>">
                         <i class="fa-solid fa-file-lines me-2 f5" style="color: purple"></i>
                         All Post
                     </a>
-                    <a class="btn d-flex align-items-center fw-semibold m-2 neuhover <?= $page == 'pages/projects' ? 'n-active' : '' ?>" href="<?= site_url('/projects') ?>">
+                    <a class="btn d-flex align-items-center p-color m-2 neuhover <?= $page == 'pages/projects' ? 'n-active' : '' ?>" href="<?= site_url('/projects') ?>">
                         <i class="fa-solid fa-list-check me-2 f5" style="color: purple"></i>
                         Projects
                     </a>
                     <?php if ($admin) { ?>
-                        <a class="btn d-flex align-items-center fw-semibold m-2 neuhover <?= $page == 'pages/messages' ? 'n-active' : '' ?>" href="<?= site_url('/messages') ?>">
+                        <a class="btn d-flex align-items-center p-color m-2 neuhover <?= $page == 'pages/messages' ? 'n-active' : '' ?>" href="<?= site_url('/messages') ?>">
                             <i class="fa-solid fa-message me-2 f5" style="color: purple"></i>
                             Messages
                         </a>

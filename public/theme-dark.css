@@ -31,7 +31,6 @@ body {
 .neu-btn:hover,
 .neu-input,
 .neu-input:focus {
-  color: #31344b;
   background-color: #161b22;
 }
 
@@ -40,18 +39,31 @@ body {
   box-shadow: 5px 5px 5px 0px #0d1117;
 }
 
-.neu-btn:hover,
-.neu-inset,
-.neu-input,
-.neu-input:focus {
+.neu-inset {
   color: #faa356;
+}
+
+.neu-input {
+  color: #77bdfb;
+}
+
+.neu-inset,
+.neu-input {
   background-color: #0d1117;
+  box-shadow: 5px 5px 5px 0px #161b22;
+  border: 0.1px solid black;
+}
+
+.neu-btn:hover {
+  color: #faa356;
+  font-weight: bold;
   box-shadow: 5px 5px 5px 0px #161b22;
   border: 0.1px solid black;
 }
 
 .neu-input:focus {
   box-shadow: 5px 5px 5px 0px #0d1117;
+  color: #77bdfb;
 }
 
 .code {
